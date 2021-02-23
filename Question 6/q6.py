@@ -125,7 +125,7 @@ def is_point_in_polygon_no_numpy(polygon_coordinate_x, polygon_coordinate_y, poi
             return True
         # point located between two endpoints of polygon's edge
         elif point1_in_polygon[1] > y > point2_in_polygon[1] or point2_in_polygon[1] > y > point1_in_polygon[1]:
-            # intersection_point is edge intersect with a horizontal line which through input point
+            # edge is vertical
             if point1_in_polygon[0] == point2_in_polygon[0]:
                 intersection_point_x = point1_in_polygon[0]
             else:
