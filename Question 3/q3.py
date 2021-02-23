@@ -220,8 +220,8 @@ def test(test_data, model_path):
 
 def main(training=True):
     if training:
-        train_data = "./train_data.txt"
-        train_truth = "./train_truth.txt"
+        train_data = "input_data/train_data.txt"
+        train_truth = "input_data/train_truth.txt"
         model_path = "./model"
         log_path = "./log"
         train(train_data, train_truth, model_path, log_path,
@@ -232,7 +232,7 @@ def main(training=True):
               reload_path="./model/20210219_093100_epoch-50_batch-16_lr-0.001_dr-0.99_staircase-True",
               staircase=True)
     else:
-        test_data = "./test_data.txt"
+        test_data = "input_data/test_data.txt"
         output_path = "./test_predicted.txt"
         model_path = "./model/20210219_100653_epoch-50_batch-4_lr-0.001_dr-0.98_staircase-True"
         output = test(test_data, model_path)

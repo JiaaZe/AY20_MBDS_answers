@@ -214,8 +214,8 @@ def is_points_in_polygon_no_numpy(polygon_coordinate_list, points_coordinate_lis
 
 
 def main():
-    polygon_path = "./input_question_6_polygon"
-    points_path = "./input_question_6_points"
+    polygon_path = "input_data/input_question_6_polygon"
+    points_path = "input_data/input_question_6_points"
     output_path = "./output_question_6"
     # show(polygon_path, points_path)
     polygon_coordinate_list = read_file(polygon_path, read_header=True)

@@ -51,8 +51,8 @@ def index_to_coords(input_index, l1, l2):
 
 def main():
     l1, l2 = 50, 57
-    input_coords_path = "./input_coordinates_7_1.txt"
-    input_index_path = "./input_index_7_1.txt"
+    input_coords_path = "input_data/input_coordinates_7_1.txt"
+    input_index_path = "input_data/input_index_7_1.txt"
     output_coords_path = "./output_coordinates_7_1.txt"
     output_index_path = "./output_index_7_1.txt"
 

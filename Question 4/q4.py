@@ -133,7 +133,7 @@ def _8_connectivity(matrix):
 
 
 def main():
-    input_path = "./input_question_4"
+    input_path = "input_data/input_question_4"
     origial_matrix = np.array(read_file(input_path, read_header=True))
     matrix = np.expand_dims(origial_matrix, axis=2)
     zero_matrix = np.zeros(matrix.shape, dtype=int)
