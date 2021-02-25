@@ -4,35 +4,34 @@ coordinate_list = []
 
 
 def read_file(path, read_header=False):
-    f = open(path, "r+")
-    rows = f.readlines()
-    if not read_header:
-        rows = rows[1:]
-    cols = []
-    for row in rows:
-        col = str.split(row)
-        if len(col) == 1:
-            cols.append([int(col[0])])
-        else:
-            cols.append([int(c) for c in col])
-    return cols
+    with open(path, "r+") as f:
+        rows = f.readlines()
+        if not read_header:
+            rows = rows[1:]
+        cols = []
+        for row in rows:
+            col = str.split(row)
+            if len(col) == 1:
+                cols.append([int(col[0])])
+            else:
+                cols.append([int(c) for c in col])
+        return cols
 
 
 def write_file(path, header, data):
-    f = open(path, "w+")
-    if header is not None:
-        row = ""
-        for h in header:
-            row += "\t" + h
-        row = row[1:] + "\n"
-        f.write(row)
-    for cols in data:
-        row = ""
-        for col in cols:
-            row += "\t" + str(col)
-        row = row[1:] + "\n"
-        f.write(row)
-    f.close()
+    with open(path, "w+") as f:
+        if header is not None:
+            row = ""
+            for h in header:
+                row += "\t" + h
+            row = row[1:] + "\n"
+            f.write(row)
+        for cols in data:
+            row = ""
+            for col in cols:
+                row += "\t" + str(col)
+            row = row[1:] + "\n"
+            f.write(row)
 
 
 def set_value(matrix, value):
